@@ -242,4 +242,5 @@ for i in range(len(df.columns)):
                             dropped.append(col1)
 
 df.drop(columns=dropped, inplace=True)
+df.drop(['Рпл. Тек (послед точка на КВД)','Рпл. Тек (Расчет по КВД)'],axis=1, inplace=True)
 df.to_csv('content/withCorel.csv', sep=";", encoding='cp1251')
